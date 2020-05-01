@@ -30,7 +30,7 @@ rescue Errno::ENOENT
   filename = $!.message.sub("No such file or directory - ", "")
   print("Unable to find file #{filename}.")
 rescue => e
-  p e
+  dp e
   open('log.txt', 'w') { |f|
     f.puts e
     f.puts e.backtrace

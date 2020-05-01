@@ -12,6 +12,8 @@ class Module
     dir = "Script/lib/#{key.underscore}"
     file = "#{dir}.rb"
 
+    dputs "> #{dir}"
+
     if File.exist?(file)
       load_script(file)
       eval(key)
